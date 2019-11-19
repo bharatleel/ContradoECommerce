@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ApplicationSettings.cs" />
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContradoECommerce.DataAccess\ContradoECommerce.DataAccess.csproj" />
+    <ProjectReference Include="..\ContradoECommerce.Shared\ContradoECommerce.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Product list</h1>
+
+<p *ngIf="!products"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="products">
+  <thead>
+    <tr>
+      <th>Product Id</th>
+      <th>Product Name</th>
+      <th>Product Description</th>
+      <th>Category Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td><a [routerLink]="['/fetch-data']">{{ product.productId }}</a></td>
+      <td>{{ product.prodName }}</td>
+      <td>{{ product.prodDescription }}</td>
+      <td>{{ product.categoryName }}</td>
+    </tr>
+  </tbody>
+</table>
